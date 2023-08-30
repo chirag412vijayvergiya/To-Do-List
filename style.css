@@ -164,7 +164,7 @@ h2 {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   #container {
     margin: 130px 5px 110px;
     width: 400px;
