@@ -14,7 +14,7 @@
 
 body {
   background-image: url(back.jpg);
-  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -164,12 +164,32 @@ h2 {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #container {
     margin: 200px 5px 110px;
     width: 400px;
     height: 400px;
     /* margin-left: 60px;
     margin-right: 80px; */
+  }
+} 
+*/
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+  #container {
+    margin: 200px 5px 110px;
+    width: 400px;
+    height: 400px;
+    /* margin-left: 60px;
+    margin-right: 80px; */
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background-size: auto;
   }
 }
