@@ -14,8 +14,6 @@
 
 body {
   background-image: url(back.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 p {
@@ -175,21 +173,15 @@ h2 {
 } 
 */
 
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-  }
+@media screen and (max-width: 768px) {
   #container {
-    margin: 200px 5px 110px;
+    margin: 130px 5px 110px;
     width: 400px;
     height: 400px;
     /* margin-left: 60px;
     margin-right: 80px; */
-  }
-}
-
-@media (min-width: 769px) {
-  body {
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
