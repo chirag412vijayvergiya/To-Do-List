@@ -165,7 +165,9 @@ h2 {
 
 @media screen and (max-width: 600px) {
   #container {
-    margin: 130px 0px 110px;
+    margin: 130px 5px 110px;
+    width: 400px;
+    height: 400px;
     /* margin-left: 60px;
     margin-right: 80px; */
   }
