@@ -1,0 +1,164 @@
+:root {
+  --darker: #1f2937;
+  --gray: #687280;
+  --pink: #ec4899;
+  --lightgreen: linear-gradient(to top left, #c91b1b, #4158d0);
+  --lightRed: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(back.jpg);
+  background-size: cover;
+}
+
+p {
+  font-size: smaller;
+  transform: rotate(-30deg);
+  transform-origin: top left;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -12px;
+}
+
+#container {
+  width: 470px;
+  height: 540px;
+  padding: 15px;
+  box-shadow: 5px 5px #635ee2;
+  background-color: #a8dbfa;
+  border-radius: 10%;
+  margin-left: 470px;
+  margin-top: 50px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    max-width: 50%;
+    max-height: 50%;
+  }
+}
+
+.head {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: cursive;
+  text-align: center;
+  color: var(--gray);
+}
+
+#new-task-form {
+  margin-top: 1rem;
+  display: flex;
+}
+
+#input-new-task {
+  flex: 1;
+  background-color: var(--darker);
+  padding: 0.6rem;
+  font-family: cursive;
+  border-radius: 0.9rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+
+#submit-new-task {
+  color: var(--pink);
+  font-size: 1.25 rem;
+  font-weight: 700;
+  border-style: none;
+  font-family: cursive;
+  background-image: var(--lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+  border: none;
+  outline: none;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px auto;
+}
+
+#submit-new-task:hover {
+  opacity: 0.8;
+}
+
+#submit-new-task:active {
+  opacity: 0.6;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-image: linear-gradient(#1fa0ff, #12dafb);
+  border-radius: 5px;
+}
+
+.text {
+  flex: 1;
+  background: transparent;
+  border-style: none;
+  font-size: medium;
+  padding-top: 5px;
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+#tasks .task .content .text {
+  color: var(--darker);
+  font-size: 1.129rem;
+  width: 120%;
+  display: block;
+  transition: 0.4s;
+}
+
+#tasks .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  border-style: none;
+  transition: 0.4s;
+}
+.task .actions .edit {
+  background-image: var(--lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+  background-image: var(--lightRed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
